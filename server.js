@@ -1,25 +1,17 @@
 /* eslint-disable */
 
-// const jsonServer = require('json-server');
-// const server = jsonServer.create();
-// const router = jsonServer.router('db.json');
-// const middlewares = jsonServer.defaults();
+import jsonServer from 'json-server';
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// server.use(middlewares);
-// server.use(router);
+// Convert import.meta.url to __dirname equivalent
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// const PORT = process.env.PORT || 3001; // Use environment variable or default port
-// server.listen(PORT, '0.0.0.0', () => {
-//   console.log(`JSON Server is running on port ${PORT}`);
-// });
-
-
-// server.js
-const jsonServer = require('json-server');
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
-const path = require('path');
 const port = process.env.PORT || 3001;
 
 // Serve static files from the React app

@@ -10,11 +10,11 @@ function AddPost() {
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
   const [title, setTitle] = useState("");
-  const [img,setImg]=useState('');
+  const [img, setImg] = useState("");
   const navigate = useNavigate();
   function handleAdd() {
     axios
-      .post("http://localhost:3000/posts", {
+      .post("/api/posts", {
         id: id,
         bloger: bloger,
         comments: comments,
@@ -38,11 +38,13 @@ function AddPost() {
             type="file"
             placeholder="Upload Image"
           /> */}
-          <input type="text" 
-          placeholder="Enter image url"
-          onChange={(e) =>{
-            setImg(e.target.value)
-          }}/>
+          <input
+            type="text"
+            placeholder="Enter image url"
+            onChange={(e) => {
+              setImg(e.target.value);
+            }}
+          />
           <input
             onChange={(e) => {
               setTitle(e.target.value);

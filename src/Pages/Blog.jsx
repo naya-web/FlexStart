@@ -6,11 +6,11 @@ import img4 from "../assets/img/blog/blog-4.jpg";
 import BlogCard from "../Components/BolgPageComponents/BlogCard";
 import { IoSearchSharp } from "react-icons/io5";
 import BlogCategory from "../Components/BolgPageComponents/BlogCategory";
-import postImg1 from '../assets/img/blog/blog-recent-1.jpg'
-import postImg2 from '../assets/img/blog/blog-recent-2.jpg'
-import postImg3 from '../assets/img/blog/blog-recent-3.jpg'
-import postImg4 from '../assets/img/blog/blog-recent-4.jpg'
-import postImg5 from '../assets/img/blog/blog-recent-5.jpg'
+import postImg1 from "../assets/img/blog/blog-recent-1.jpg";
+import postImg2 from "../assets/img/blog/blog-recent-2.jpg";
+import postImg3 from "../assets/img/blog/blog-recent-3.jpg";
+import postImg4 from "../assets/img/blog/blog-recent-4.jpg";
+import postImg5 from "../assets/img/blog/blog-recent-5.jpg";
 import RecentPosts from "../Components/BolgPageComponents/RecentPosts";
 import BlogTag from "../Components/BolgPageComponents/BlogTag";
 import { useEffect, useState } from "react";
@@ -18,12 +18,12 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Blog() {
-  const [BlogCardData,setBlogCardData]=useState([])
-  useEffect(()=>{
-    axios.get('http://localhost:3000/posts').then((res)=>{
-      setBlogCardData(res.data)
-    })
-  })
+  const [BlogCardData, setBlogCardData] = useState([]);
+  useEffect(() => {
+    axios.get("/api/posts").then((res) => {
+      setBlogCardData(res.data);
+    });
+  });
   // const BlogCardData = [
   //   {
   //     img: img1,
@@ -66,100 +66,100 @@ function Blog() {
   //       "Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui. Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.",
   //   },
   // ];
-  const blogCategoryData=[
+  const blogCategoryData = [
     {
-      label: 'General',
-      number: '25'
+      label: "General",
+      number: "25",
     },
     {
-      label: 'LifeStyle',
-      number: '12'
+      label: "LifeStyle",
+      number: "12",
     },
     {
-      label: 'Travel',
-      number: '5'
+      label: "Travel",
+      number: "5",
     },
     {
-      label: 'Design',
-      number: '22'
+      label: "Design",
+      number: "22",
     },
     {
-      label: 'Creative',
-      number: '8'
+      label: "Creative",
+      number: "8",
     },
     {
-      label: 'Education',
-      number: '14'
+      label: "Education",
+      number: "14",
     },
-  ]
-  const recentPostsData=[
+  ];
+  const recentPostsData = [
     {
       postImg: postImg1,
-      title: 'Nihil blanditiis at in nihil autem',
-      date: 'Jan 1, 2020',
+      title: "Nihil blanditiis at in nihil autem",
+      date: "Jan 1, 2020",
     },
     {
       postImg: postImg2,
-      title: 'Quidem autem et impedit',
-      date: 'Jan 1, 2020',
+      title: "Quidem autem et impedit",
+      date: "Jan 1, 2020",
     },
     {
       postImg: postImg3,
-      title: 'Id quia et et ut maxime similique occaecati ut',
-      date: 'Jan 1, 2020',
+      title: "Id quia et et ut maxime similique occaecati ut",
+      date: "Jan 1, 2020",
     },
     {
       postImg: postImg4,
-      title: 'Laborum corporis quo dara net para',
-      date: 'Jan 1, 2020',
+      title: "Laborum corporis quo dara net para",
+      date: "Jan 1, 2020",
     },
     {
       postImg: postImg5,
-      title: 'Et dolores corrupti quae illo quod dolor',
-      date: 'Jan 1, 2020',
+      title: "Et dolores corrupti quae illo quod dolor",
+      date: "Jan 1, 2020",
     },
-  ]
-  const blogTagsData=[
+  ];
+  const blogTagsData = [
     {
-      title:'App'
-    },
-    {
-      title:'IT'
+      title: "App",
     },
     {
-      title:'Business'
+      title: "IT",
     },
     {
-      title:'Mac'
+      title: "Business",
     },
     {
-      title:'Design'
+      title: "Mac",
     },
     {
-      title:'Office'
+      title: "Design",
     },
     {
-      title:'Creative'
+      title: "Office",
     },
     {
-      title:'Studio'
+      title: "Creative",
     },
     {
-      title:'Smart'
+      title: "Studio",
     },
     {
-      title:'Tips'
+      title: "Smart",
     },
     {
-      title:'Marketing'
+      title: "Tips",
     },
-  ]
-  const navigate=useNavigate()
+    {
+      title: "Marketing",
+    },
+  ];
+  const navigate = useNavigate();
 
-  function Delete(id){
-    axios.delete(`http://localhost:3000/posts/${id}`).then(()=>{
-      window.location.reload()
-    })
+  function Delete(id) {
+    axios.delete(`/api/posts/${id}`).then(() => {
+      window.location.reload();
+    });
   }
   return (
     <>
@@ -188,13 +188,12 @@ function Blog() {
                     date={e.date}
                     comments={e.comments}
                     description={e.description}
-                    handleDelete={()=>{
-                      Delete(e.id)
-                      
+                    handleDelete={() => {
+                      Delete(e.id);
                     }}
-                    handleEdit={()=>{
-                      navigate(`/editPost/${e.id}`)
-                  }}
+                    handleEdit={() => {
+                      navigate(`/editPost/${e.id}`);
+                    }}
                   />
                 </>
               );
@@ -202,7 +201,7 @@ function Blog() {
           </Col>
           <Col lg="4">
             <div className="px-4 py-3 shadow">
-              <h4 style={{ color: "#012970",marginBottom:'15px'}}>Search</h4>
+              <h4 style={{ color: "#012970", marginBottom: "15px" }}>Search</h4>
               <div className="input-group ">
                 <input
                   type="text"
@@ -219,39 +218,64 @@ function Blog() {
                   className="btn fs-5 "
                   type="button"
                   id="button-addon2"
-                ><IoSearchSharp /></button>
+                >
+                  <IoSearchSharp />
+                </button>
               </div>
-              <h4 style={{ color: "#012970",marginTop:'30px',marginBottom:'15px' }}>Categories</h4>
-              {
-                blogCategoryData.map((e,i)=>{
-                  return(
+              <h4
+                style={{
+                  color: "#012970",
+                  marginTop: "30px",
+                  marginBottom: "15px",
+                }}
+              >
+                Categories
+              </h4>
+              {blogCategoryData.map((e, i) => {
+                return (
+                  <>
+                    <BlogCategory key={i} label={e.label} number={e.number} />
+                  </>
+                );
+              })}
+              <h4
+                style={{
+                  color: "#012970",
+                  marginBottom: "15px",
+                  marginTop: "20px",
+                }}
+              >
+                Recent Posts
+              </h4>
+              {recentPostsData.map((e, i) => {
+                return (
+                  <>
+                    <RecentPosts
+                      key={i}
+                      postImg={e.postImg}
+                      title={e.title}
+                      date={e.date}
+                    />
+                  </>
+                );
+              })}
+              <h4
+                style={{
+                  color: "#012970",
+                  marginBottom: "15px",
+                  marginTop: "20px",
+                }}
+              >
+                Recent Posts
+              </h4>
+              <div className="d-flex flex-wrap justify-content- column-gap-4">
+                {blogTagsData.map((e, i) => {
+                  return (
                     <>
-                      <BlogCategory key={i} label={e.label} number={e.number}/>
+                      <BlogTag key={i} btnTitle={e.title} />
                     </>
-                  )
-                })
-              }
-              <h4 style={{ color: "#012970",marginBottom:'15px',marginTop:'20px'}}>Recent Posts</h4>
-              {
-                recentPostsData.map((e,i)=>{
-                  return(
-                    <>
-                    <RecentPosts key={i} postImg={e.postImg} title={e.title} date={e.date}/>
-                    </>
-                  )
-                })
-              }
-              <h4 style={{ color: "#012970",marginBottom:'15px',marginTop:'20px'}}>Recent Posts</h4>
-                <div className="d-flex flex-wrap justify-content- column-gap-4">
-              {
-                blogTagsData.map((e,i)=>{
-                  return(
-                    <>
-                      <BlogTag key={i} btnTitle={e.title}/>
-                    </>
-                  )
-                })
-              }
+                  );
+                })}
               </div>
             </div>
           </Col>
