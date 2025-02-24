@@ -1,0 +1,37 @@
+
+.edit {
+    padding: 120px 0 50px 0;
+    text-align: center; 
+  }
+  
+  .edit input {
+    display: block;
+    margin: 25px auto;
+    padding: 10px 15px;
+    width: 70%; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    font-size: 16px; 
+    transition: border-color 0.3s ease; 
+  }
+  
+  .edit input:focus {
+    border-color: #0d6efd; 
+    outline: none;
+    border-radius: 5px; 
+  }
+  
+  .edit button {
+    background-color: #0d6efd;
+    color: white; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .edit button:hover {
+    background-color: #0a58ca; 
+  }
+  

@@ -1,0 +1,9 @@
+.icons i{
+    color: rgba(1, 41, 112, 0.5);
+    margin: 0 5px;
+    font-size: 22px;
+    transition: .3s;
+}
+.icons i:hover{
+    color: rgba(1, 41, 112, 1);
+}

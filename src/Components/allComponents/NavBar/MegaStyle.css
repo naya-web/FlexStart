@@ -1,0 +1,15 @@
+.align-text-top a{
+    text-align: right;
+    color:  #013289 !important;
+}
+
+.align-text-top  .dropdown-menu{
+    /* width: 100%; */
+    /* width: 880px; */
+    /* width: 600%; */
+    background-color: rgb(255, 255, 255) ;
+    position: absolute;
+    left: -470px;
+    border: none;
+}
+

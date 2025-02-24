@@ -1,0 +1,18 @@
+.logo{
+    color: #012970;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    font-size: 32px;
+}
+.navbar-nav a{
+    color:  #013289;
+    text-decoration: none;
+    /* margin-top: auto; */
+}
+.navbar-nav a.active{
+    color: #4154f1;
+    border: none;
+}
+.navbar-nav a:hover{
+    color: #4154f1;
+}

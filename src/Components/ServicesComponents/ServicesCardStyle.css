@@ -1,0 +1,7 @@
+.services-card:hover .services-btn{
+    color: #fff !important;
+}
+.services-card:hover i{
+    background-color: #fff !important;
+    width: 25%;
+}

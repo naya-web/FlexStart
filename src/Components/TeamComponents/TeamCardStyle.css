@@ -1,0 +1,42 @@
+.card-image{
+    position: relative;
+}
+.card-image .wave{
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+}
+.team-card{
+    transition: .3s;
+}
+.team-card:hover{
+    transform: scale(1.06);
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    gap: 8px;
+    background-color: #ffffff79;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+    display: none;
+    transition: .3s;
+}
+.links i{
+    color: #012970;
+    opacity: .6;
+    transition: .3s;
+}
+.links i:hover{
+    opacity: 1;
+}
+.team-card:hover .links{
+    right: 10px;
+    display: flex;
+    transition: .3s;
+}

@@ -1,0 +1,36 @@
+.add-post {
+    padding: 90px 0 50px 0;
+    text-align: center; 
+  }
+  
+  .add-post input {
+    display: block;
+    margin: 15px auto;
+    padding: 8px 20px;
+    width: 70%; 
+    color: #012970;
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    transition: border-color 0.3s ease; 
+  }
+  
+  .add-post input:focus {
+    border-color: #013289; /* Changed to a darker blue on focus */
+    outline: none;
+    border-radius: 5px; /* Matched with the normal state */
+  }
+  
+  .add-post Button {
+    background-color: #013289; /* A dark blue for the button */
+    color: white; /* White text for contrast */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .add-post Button:hover {
+    background-color: #011f6f; /* Slightly lighter blue on hover */
+  }
+  

@@ -1,0 +1,28 @@
+.hero{
+    /* background-color: red; */
+    background-image: url(../../assets/img/hero-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 30px;
+}
+.hero h1{
+    font-size: 46px;
+    font-weight: 700;
+    color: #012970;
+    font-family: "Nunito", sans-serif;
+}
+.hero p{
+    color: #444444;
+    margin: 15px 0 0 0;
+    font-size: 25px;
+    font-family: "Nunito", sans-serif;
+}
+.arrow{
+    transition: .5s;
+}
+.but:hover .arrow{
+    transform: translateX(8px);
+    transition: .5s;
+}

@@ -1,0 +1,9 @@
+.feature i{
+    border-radius: 4px;
+    transition: .5s;
+}
+.feature i:hover{
+    background-color: #4154f1 !important;
+    color: #fff;
+    transition: .5s;
+}
