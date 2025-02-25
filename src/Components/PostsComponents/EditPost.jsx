@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import "./EditPostStyle.css";
-
+import "./EditPostStyle.css"; 
+ 
 function EditPost() {
   const navigate = useNavigate();
   const { id } = useParams();
